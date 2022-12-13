@@ -2,13 +2,12 @@ import moedaToNumber from "./moedaToNumber.js";
 import stringToDate from "./stringToDate.js";
 
 declare global {
-  type FormaDePagamento = ["Boleto", "Cartão de Crédito"];
-  type StatusPagamento = [
-    "Paga",
-    "Aguardando pagamento",
-    "Recusada pela operadora de cartão",
-    "Estornada",
-  ];
+  type FormaDePagamento = "Boleto" | "Cartão de Crédito";
+  type StatusPagamento =
+    | "Paga"
+    | "Aguardando pagamento"
+    | "Recusada pela operadora de cartão"
+    | "Estornada";
 
   interface TransaçãoAPI {
     Nome: string;
